@@ -12,12 +12,12 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 
 <body>
-    <div class="modal" tabindex="-1" role="dialog" id="modal">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" tabindex="-1" role="dialog" id="newpost-modal" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Create a new post</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -27,7 +27,6 @@
                     <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-camera"></i></button>
                     <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-location-dot"></i></button>
                 </div>
-                <hr>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Publish</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,7 +38,7 @@
     <div class="container-fluid">
         <nav class="nav nav-pills nav-fill m-1 p-2 bg-light">
             <i class="fa-brands fa-instagram w-75 mt-4 fw-bold"> Instagram</i>
-            <button class="btn btn-success btn-sm m-3" data-bs-toggle="modal" data-bs-target="#modal">Create a new post</button>
+            <button class="btn btn-success btn-sm m-3" data-bs-toggle="modal" data-bs-target="#newpost-modal">Create a new post</button>
             <div class="btn-group">
                 <button class="btn btn-secondary btn-sm dropdown-toggle m-3" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
