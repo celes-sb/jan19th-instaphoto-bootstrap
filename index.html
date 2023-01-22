@@ -12,29 +12,28 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 
 <body>
+    <!-- MODAL CODE -->
     <div class="modal fade" tabindex="-1" role="dialog" id="newpost-modal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Create a new post</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h6 class="modal-title opacity-75"><small>Create a new post</small></h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Caption:</p>
-                    <textarea placeholder="Add the caption of your post here"></textarea>
-                    <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-camera"></i></button>
-                    <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-location-dot"></i></button>
+                    <p class="opacity-75"><small>Caption:</small></p>
+                    <textarea placeholder="Add the caption of your post here" class="w-100 mb-3 border-secondary rounded opacity-75"></textarea>
+                    <button type="button" class="btn btn-sm btn-outline-dark bg-light border-secondary rounded"><i class="fa-solid fa-camera"></i></button>
+                    <button type="button" class="btn btn-sm btn-outline-dark bg-light border-secondary rounded"><i class="fa-solid fa-location-dot"></i></button>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Publish</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-sm btn-success">Publish</button>
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- DROPDOWN MENU -->
     <div class="container-fluid">
         <nav class="nav nav-pills nav-fill m-1 p-2 bg-light">
             <i class="fa-brands fa-instagram w-75 mt-4 fw-bold"> Instagram</i>
@@ -47,21 +46,28 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Accessibility</a></li>
-                    <li><a class="dropdown-item border-bottom" href="#">Privacy and Data</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                 </ul>
             </div>
         </nav>
-        <ul class="nav nav-tabs d-flex justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active m-1 p-1" aria-current="page" href="#"><button
-                        class="btn btn-sm btn-primary"><i class="fa-solid fa-table-cells"></i></button></a>
+
+        <!--PAGINATION ICONS -->
+        <nav aria-label="page navigation">
+        <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#first-page"><button
+                        class="btn btn-sm btn-outline-primary"><i class=" fa fa-table-cells"></i></button></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active m-1 p-1" aria-current="page" href="#"><button
-                        class="btn btn-sm btn-primary"><i class="fa-solid fa-square"></i></button></a>
+            <li class="page-item">
+                <a class="page-link" href="#second-page"><button
+                        class="btn btn-sm btn-outline-primary"><i class="fa fa-square"></i></button></a>
             </li>
         </ul>
+        </nav>
+
+        <!-- GRID -->
         <div class="row align-items-center">
             <div class="col-4 gx-1 gy-1">
                 <img src="https://i.picsum.photos/id/539/4237/2814.jpg?hmac=SbSc-eXlV4dccmtPIzLZV6qJCCOsiUkAfUCXV8v9SFA"
@@ -89,6 +95,84 @@
             </div>
         </div>
     </div>
+
+    <!-- SINGLE PHOTO - SECOND PAGE -->
+    <div class="container-fluid d-flex flex-column justify-content-center w-50 mt-5 p-5" id="second-page">
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Time stands still when you are traveling...</h5>
+            <h6 class="col-2">1/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/539/4237/2814.jpg?hmac=SbSc-eXlV4dccmtPIzLZV6qJCCOsiUkAfUCXV8v9SFA"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>777 Likes</strong></h6>
+            <p class="col-12">There are various "Platos tipico" in Honduras, that eaten for breakfast, lunch or dinner. The breakfast and dinner Plato Tipico usually includes: eggs (fried or scrambled), re-fried red beans, fresh cheese, cream, wheat flour tortillas, cream, avocado and fried green bananas (tajadas, literally slices).</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Beach day, every day!</h5>
+            <h6 class="col-2">2/9</h6>
+            <div class="row w-100">
+                <img src="https://i.picsum.photos/id/199/2592/1728.jpg?hmac=qOzjPDUZT5vWXyaHaaTo602LZZdZgyQtSfa8KB3uTDs"
+                    class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>333 Likes</strong></h6>
+            <p class="col-12">A beach is a landform alongside a body of water which consists of loose particles. The particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles, etc., or biological sources, such as mollusc shells or coralline algae.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Love is in the air <3</h5>
+            <h6 class="col-2">3/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/318/3264/2448.jpg?hmac=zkYZ29-Ww_A4O_kZ3gjlpFQuEYELWgeM6aI_CMG01BU"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>444 Likes</strong></h6>
+            <p class="col-12">Destination touristique visitée chaque année par quelque dix millions de touristes étrangers (treize pour Paris et la petite couronne), Paris possède un patrimoine architectural mondialement connu comme la cathédrale Notre-Dame de Paris, la tour Eiffel, le musée du Louvre ou encore l'Arc de Triomphe.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Amidst the trees is where I find myself.</h5>
+            <h6 class="col-2">4/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/633/1818/1228.jpg?hmac=dyjPGybYgWgnTXC3lPjV-rap_PQUlnC0O6vCkhP_-HE"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>555 Likes</strong></h6>
+            <p class="col-12">Forests account for 75% of the gross primary productivity of the Earth's biosphere, and contain 80% of the Earth's plant biomass. The world's forests contain about 606 gigatonnes of living biomass (above- and below-ground) and 59 gigatonnes of dead wood. The total biomass has decreased slightly since 1990, but biomass per unit area has increased.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Into the wild I go.</h5>
+            <h6 class="col-2">5/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/541/5000/3181.jpg?hmac=INz3jPMuLM7h-tojCESx6OiTCZprznv-RYGXjvEBAgA"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>888 Likes</strong></h6>
+            <p class="col-12">Efficient decompression requires the diver to ascend fast enough to establish as high a decompression gradient, in as many tissues as safely possible, without provoking the development of symptomatic bubbles. This is facilitated by the highest acceptably safe oxygen partial pressure in the breathing gas, and avoiding gas changes that could cause counterdiffusion bubble formation or growth.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Sun & Chill</h5>
+            <h6 class="col-2">6/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/449/4928/3264.jpg?hmac=FjAIhJX98rzAw5p3mtJ3_kyLE3rSQnFM2PBK-yUuvAA"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>101 Likes</strong></h6>
+            <p class="col-12">Friendships are foremost formed by choice, typically on the basis that the parties involved admire each other on an intimate level, enjoying aspects such as commonality and socializing. Some factors affect most people. For example, most people underestimate how much other people like them. The liking gap can make it difficult to form friendships.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Me and my thoughts caressed by the wind...</h5>
+            <h6 class="col-2">7/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/620/2509/1673.jpg?hmac=bWFN9sS2-MlX3PI1_UdWocRel5XXZDdVHoJsaBicf0w"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>111 Likes</strong></h6>
+            <p class="col-12">Bicycles and horse buggies were the two mainstays of private transportation just prior to the automobile, and the grading of smooth roads in the late 19th century was stimulated by the widespread advertising, production, and use of these devices. More than 1 billion bicycles have been manufactured worldwide as of the early 21st century.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Coffee o'clock</h5>
+            <h6 class="col-2">8/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/513/4373/3280.jpg?hmac=LkZSEFr5H-jsaqmKTdANAlVWv6Zb38bDJxz5jQEyU0g"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>313 Likes</strong></h6>
+            <p class="col-12">Though coffee is now a global commodity, it has a long history tied closely to food traditions around the Red Sea. The earliest credible evidence of coffee drinking in the form of the modern beverage appears in modern-day Yemen from the mid-15th century in Sufi shrines, where coffee seeds were first roasted and brewed in a manner similar to current methods.</p>
+        </div>
+        <div class="row border rounded d-inline-flex justify-content-center w-100 pt-2 mb-3">
+            <h5 class="col-10">Mother Nature</h5>
+            <h6 class="col-2">9/9</h6>
+            <div class="row w-100"><img src="https://i.picsum.photos/id/928/5000/3333.jpg?hmac=yXKJh0-fbJR-jaJrS_vAeKb3lUS5O_sNSKDXV0L7dBk"
+                class="img-responsive w-100 mt-3 mb-3 p-0"></img></div>
+            <h6 class="col-12"><strong>700 Likes</strong></h6>
+            <p class="col-12">Nature, in the broadest sense, is the physical world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.</p>
+        </div>
+        </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
