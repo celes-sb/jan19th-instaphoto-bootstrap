@@ -12,7 +12,7 @@
     <title>Instagram Photo Feed with Bootstrap</title>
 
 <body>
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal" tabindex="-1" role="dialog" id="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -29,7 +29,7 @@
                 </div>
                 <hr>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Publish</button>
+                    <button type="submit" class="btn btn-primary">Publish</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -39,7 +39,7 @@
     <div class="container-fluid">
         <nav class="nav nav-pills nav-fill m-1 p-2 bg-light">
             <i class="fa-brands fa-instagram w-75 mt-4 fw-bold"> Instagram</i>
-            <button class="btn btn-success btn-sm m-3">Create a new post</button>
+            <button class="btn btn-success btn-sm m-3" data-bs-toggle="modal" data-bs-target="#modal">Create a new post</button>
             <div class="btn-group">
                 <button class="btn btn-secondary btn-sm dropdown-toggle m-3" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
